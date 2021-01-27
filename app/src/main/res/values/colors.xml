@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#9C27B0</color>
+    <color name="colorPrimaryDark">#9C27B0</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="boxColor">#9C27B0</color>
+
+
+    <color name="colorSecondary">#5e2f59</color>
+    <color name="colorSecondaryDark">#482344</color>
+
+    <color name="colorActivated">#C38415</color>
+    <color name="item_selected">#B988F4</color>
+
+    <color name="theme_surface">#622568</color>
+    <color name="theme_secondary">#3F1843</color>
+
+    <color name="green">#1D6A23</color>
+    <color name="blue">#2196f3</color>
+
+    <color name="black">#FF000000</color>
+    <color name="red">#BF1818</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="dark_gray">#5D5D5D</color>
+    <color name="darkgray">#333232</color>
+    <color name="light_gray">#ECEAEA</color>
+    <color name="transparent">#00000000</color>
+</resources>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="radius_normal">10dp</dimen>
+
+    <dimen name="text_size_small">14sp</dimen>
+    <dimen name="text_size_smallest">12sp</dimen>
+    <dimen name="text_size_normal">16sp</dimen>
+    <dimen name="text_size_big">20sp</dimen>
+
+    <dimen name="margin_small">10dp</dimen>
+    <dimen name="margin_smallest">5dp</dimen>
+    <dimen name="margin_normal">15dp</dimen>
+    <dimen name="margin_big">20dp</dimen>
+    <dimen name="margin_bigger">30dp</dimen>
+
+    <dimen name="padding_small">10dp</dimen>
+    <dimen name="padding_smallest">5dp</dimen>
+    <dimen name="padding_normal">15dp</dimen>
+    <dimen name="padding_big">20dp</dimen>
+    <dimen name="padding_bigger">30dp</dimen>
+</resources>
