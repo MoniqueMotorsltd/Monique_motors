@@ -6,11 +6,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Gravity
 import android.view.MenuItem
-import android.widget.MediaController
-import android.widget.Toast
+import android.view.animation.AnimationUtils
+import android.widget.*
 import androidx.appcompat.widget.Toolbar
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AlertDialog
+import androidx.cardview.widget.CardView
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
@@ -24,6 +25,30 @@ class DashBoard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dash_board)
+
+        //declaring animation below
+
+        val ttb = AnimationUtils.loadAnimation(this, R.anim.ttb);
+
+        //declaring buttons below
+
+        val cardview1 = findViewById(R.id.cardview1) as CardView
+        val cardview2 = findViewById(R.id.cardview2) as CardView
+        val cardview3 = findViewById(R.id.cardview3) as CardView
+        val cardview4 = findViewById(R.id.cardview4) as CardView
+        val cardview5 = findViewById(R.id.cardview5) as CardView
+        val layout = findViewById(R.id.layout) as LinearLayout
+
+
+        //setting the animation below
+
+        cardview1.startAnimation(ttb)
+        cardview2.startAnimation(ttb)
+        cardview3.startAnimation(ttb)
+        cardview4.startAnimation(ttb)
+        cardview5.startAnimation(ttb)
+        layout.startAnimation(ttb)
+
         
          toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
@@ -37,6 +62,13 @@ class DashBoard : AppCompatActivity(),NavigationView.OnNavigationItemSelectedLis
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
         navView.setNavigationItemSelectedListener (this)
+
+        val book1 = findViewById(R.id.book1) as Button
+
+        book1.setOnClickListener{
+            startActivity(Intent(this,BookingActivity::class.java))
+            finish()
+        }
 
     }
 

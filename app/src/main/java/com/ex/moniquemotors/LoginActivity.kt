@@ -6,30 +6,15 @@ import android.os.Bundle
 import android.widget.Button
 import kotlinx.android.synthetic.main.activity_login.*
 
-class Login : AppCompatActivity() {
-
-    lateinit var regBtn:Button
-    lateinit var logBtn:Button
-
-
-
+class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
+        val login_btn = findViewById(R.id.login_btn) as Button
 
-        regBtn = findViewById(R.id.reg2)
-        logBtn = findViewById(R.id.btn_login)
-
-
-
-        btn_login.setOnClickListener {
+        login_btn.setOnClickListener{
             startActivity(Intent(this,DashBoard::class.java))
-            finish()
-        }
-
-        reg2.setOnClickListener {
-            startActivity(Intent(this,SignUp::class.java))
             finish()
         }
     }

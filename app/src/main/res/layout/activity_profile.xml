@@ -15,18 +15,6 @@
         android:gravity="center_horizontal"
         android:background="@drawable/bridge">
 
-        <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginTop="20dp"
-            android:src="@drawable/moniquelogo"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Full name"
-            android:layout_marginTop="30dp"
-            android:textSize="30sp"/>
     </LinearLayout>
 
 
@@ -46,10 +34,10 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="38dp"
+                android:layout_height="36dp"
                 android:layout_marginEnd="10dp"
-                android:src="@drawable/ic_user"/>
+                android:src="@drawable/ic_user" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -60,16 +48,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="User Name"
-                    android:textSize="26sp"
-                    android:textStyle="bold"
-                    />
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/nameValue"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:text="Name"/>
+                    android:text="Name"
+                    android:textSize="14sp" />
 
             </LinearLayout>
 
@@ -81,10 +68,10 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="42dp"
+                android:layout_height="wrap_content"
                 android:layout_marginEnd="10dp"
-                android:src="@drawable/ic_email"/>
+                android:src="@drawable/ic_email" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -95,16 +82,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Email"
-                    android:textSize="26sp"
-                    android:textStyle="bold"
-                    />
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/emailValue"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:text="Name"/>
+                    android:text="Name"
+                    android:textSize="14sp" />
 
             </LinearLayout>
         </LinearLayout>
@@ -115,10 +101,10 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="36dp"
+                android:layout_height="34dp"
                 android:layout_marginEnd="10dp"
-                android:src="@drawable/ic_phone"/>
+                android:src="@drawable/ic_phone" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -129,16 +115,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Phone Number"
-                    android:textSize="26sp"
-                    android:textStyle="bold"
-                    />
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/numberValue"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:text="Name"/>
+                    android:text="Number"
+                    android:textSize="14sp" />
             </LinearLayout>
         </LinearLayout>
 
@@ -149,10 +134,10 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="38dp"
+                android:layout_height="34dp"
                 android:layout_marginEnd="10dp"
-                android:src="@drawable/ic_user"/>
+                android:src="@drawable/ic_user" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -163,16 +148,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Age"
-                    android:textSize="26sp"
-                    android:textStyle="bold"
-                    />
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/ageValue"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:text="Number"/>
+                    android:text="Age"
+                    android:textSize="14sp" />
 
             </LinearLayout>
         </LinearLayout>
@@ -183,10 +167,10 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
                 android:layout_marginEnd="10dp"
-                android:src="@drawable/ic_people"/>
+                android:src="@drawable/ic_people" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -197,16 +181,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Gender"
-                    android:textSize="26sp"
-                    android:textStyle="bold"
-                    />
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/genderValue"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:text="Sex"/>
+                    android:text="Sex"
+                    android:textSize="14sp" />
 
             </LinearLayout>
         </LinearLayout>
@@ -216,10 +199,10 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="36dp"
+                android:layout_height="match_parent"
                 android:layout_marginEnd="10dp"
-                android:src="@drawable/ic_user"/>
+                android:src="@drawable/ic_user" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -230,16 +213,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Next Of Kin"
-                    android:textSize="26sp"
-                    android:textStyle="bold"
-                    />
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/kinValue"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:text="Name"/>
+                    android:text="Name"
+                    android:textSize="14sp" />
 
             </LinearLayout>
         </LinearLayout>

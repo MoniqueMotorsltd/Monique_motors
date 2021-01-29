@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -22,10 +23,10 @@
                 android:gravity="center_vertical">
 
                 <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/moniquelogo"
-                    />
+                    android:layout_width="65dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/moniquelogo" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -38,9 +39,6 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity">
@@ -60,38 +58,40 @@
                 <RelativeLayout
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent">
+
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="230dp"
-                        android:orientation="vertical"
+                        android:layout_height="214dp"
+                        android:background="@drawable/bridge"
                         android:gravity="center"
-                        android:background="@drawable/bridge">
-
-
+                        android:orientation="vertical">
 
 
                     </LinearLayout>
 
 
                     <LinearLayout
+                        android:id="@+id/layout"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_marginTop="215dp"
                         android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp">
+                        android:layout_marginTop="215dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="vertical">
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="135dp"
-                            android:orientation="horizontal"
                             android:layout_marginBottom="10dp"
-                            >
+                            android:orientation="horizontal">
+
                             <androidx.cardview.widget.CardView
+                                android:id="@+id/cardview1"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:layout_marginRight="5dp"
                                 android:layout_gravity="center"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="1"
                                 android:orientation="vertical">
 
                                 <RelativeLayout
@@ -99,36 +99,38 @@
                                     android:layout_height="match_parent">
 
                                     <ImageView
-                                        android:layout_width="50dp"
                                         android:id="@+id/tv1"
+                                        android:layout_width="50dp"
                                         android:layout_height="50dp"
-                                        android:src="@drawable/bookseat"
                                         android:layout_centerInParent="true"
-                                        />
+                                        android:src="@drawable/bookseat" />
+
                                     <TextView
+                                        android:id="@+id/t1"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="Book A Seat"
-                                        android:textSize="16sp"
                                         android:layout_below="@id/tv1"
                                         android:layout_centerHorizontal="true"
                                         android:layout_marginTop="10dp"
-                                        android:layout_marginBottom="10dp"/>
+                                        android:layout_marginBottom="10dp"
+                                        android:text="Book A Seat"
+                                        android:textSize="16sp" />
 
                                     <Button
+                                        android:id="@+id/book1"
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
-                                        android:id="@+id/book1"
-                                        android:background="@android:color/transparent"/>
+                                        android:background="@android:color/transparent" />
                                 </RelativeLayout>
 
                             </androidx.cardview.widget.CardView>
 
                             <androidx.cardview.widget.CardView
+                                android:id="@+id/cardview2"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:layout_weight="1"
                                 android:layout_gravity="center"
+                                android:layout_weight="1"
                                 android:orientation="vertical">
 
                                 <RelativeLayout
@@ -136,27 +138,28 @@
                                     android:layout_height="match_parent">
 
                                     <ImageView
-                                        android:layout_width="50dp"
                                         android:id="@+id/tv2"
+                                        android:layout_width="50dp"
                                         android:layout_height="50dp"
-                                        android:src="@drawable/hirebus2"
                                         android:layout_centerInParent="true"
-                                        />
+                                        android:src="@drawable/hirebus2" />
+
                                     <TextView
+                                        android:id="@+id/t2"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="Hire A Bus"
-                                        android:textSize="16sp"
                                         android:layout_below="@id/tv2"
                                         android:layout_centerHorizontal="true"
                                         android:layout_marginTop="10dp"
-                                        android:layout_marginBottom="10dp"/>
+                                        android:layout_marginBottom="10dp"
+                                        android:text="Hire A Bus"
+                                        android:textSize="16sp" />
 
                                     <Button
+                                        android:id="@+id/book2"
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
-                                        android:id="@+id/book2"
-                                        android:background="@android:color/transparent"/>
+                                        android:background="@android:color/transparent" />
 
 
                                 </RelativeLayout>
@@ -164,18 +167,20 @@
                             </androidx.cardview.widget.CardView>
 
                         </LinearLayout>
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="135dp"
-                            android:orientation="horizontal"
                             android:layout_marginBottom="10dp"
-                            >
+                            android:orientation="horizontal">
+
                             <androidx.cardview.widget.CardView
+                                android:id="@+id/cardview3"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:layout_marginRight="5dp"
                                 android:layout_gravity="center"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="1"
                                 android:orientation="vertical">
 
                                 <RelativeLayout
@@ -183,36 +188,38 @@
                                     android:layout_height="match_parent">
 
                                     <ImageView
+                                        android:id="@+id/tv3"
                                         android:layout_width="50dp"
-                                        android:id="@+id/logistics"
                                         android:layout_height="50dp"
-                                        android:src="@drawable/logistics"
                                         android:layout_centerInParent="true"
-                                        />
+                                        android:src="@drawable/logistics" />
+
                                     <TextView
+                                        android:id="@+id/t3"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="Logistic."
-                                        android:textSize="16sp"
-                                        android:layout_below="@id/logistics"
+                                        android:layout_below="@id/tv3"
                                         android:layout_centerHorizontal="true"
                                         android:layout_marginTop="10dp"
-                                        android:layout_marginBottom="10dp"/>
+                                        android:layout_marginBottom="10dp"
+                                        android:text="Logistic."
+                                        android:textSize="16sp" />
 
                                     <Button
+                                        android:id="@+id/book3"
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
-                                        android:id="@+id/book3"
-                                        android:background="@android:color/transparent"/>
+                                        android:background="@android:color/transparent" />
                                 </RelativeLayout>
 
                             </androidx.cardview.widget.CardView>
 
                             <androidx.cardview.widget.CardView
+                                android:id="@+id/cardview4"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:layout_weight="1"
                                 android:layout_gravity="center"
+                                android:layout_weight="1"
                                 android:orientation="vertical">
 
                                 <RelativeLayout
@@ -220,27 +227,28 @@
                                     android:layout_height="match_parent">
 
                                     <ImageView
-                                        android:layout_width="50dp"
                                         android:id="@+id/tv4"
+                                        android:layout_width="50dp"
                                         android:layout_height="50dp"
-                                        android:src="@drawable/hireabus"
                                         android:layout_centerInParent="true"
-                                        />
+                                        android:src="@drawable/hireabus" />
+
                                     <TextView
+                                        android:id="@+id/t4"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="Book For Someone"
-                                        android:textSize="16sp"
                                         android:layout_below="@id/tv4"
                                         android:layout_centerHorizontal="true"
                                         android:layout_marginTop="10dp"
-                                        android:layout_marginBottom="10dp"/>
+                                        android:layout_marginBottom="10dp"
+                                        android:text="Book For Someone"
+                                        android:textSize="16sp" />
 
                                     <Button
+                                        android:id="@+id/book4"
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
-                                        android:id="@+id/book4"
-                                        android:background="@android:color/transparent"/>
+                                        android:background="@android:color/transparent" />
 
 
                                 </RelativeLayout>
@@ -248,18 +256,20 @@
                             </androidx.cardview.widget.CardView>
 
                         </LinearLayout>
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="135dp"
-                            android:orientation="horizontal"
                             android:layout_marginBottom="10dp"
-                            >
+                            android:orientation="horizontal">
+
                             <androidx.cardview.widget.CardView
+                                android:id="@+id/cardview5"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:layout_marginRight="5dp"
                                 android:layout_gravity="center"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="1"
                                 android:orientation="vertical">
 
                                 <RelativeLayout
@@ -267,36 +277,38 @@
                                     android:layout_height="match_parent">
 
                                     <ImageView
-                                        android:layout_width="50dp"
                                         android:id="@+id/tv5"
+                                        android:layout_width="50dp"
                                         android:layout_height="50dp"
-                                        android:src="@drawable/moniquelogo"
                                         android:layout_centerInParent="true"
-                                        />
+                                        android:src="@drawable/status" />
+
                                     <TextView
+                                        android:id="@+id/t5"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="APP-UPDATE"
-                                        android:textSize="16sp"
                                         android:layout_below="@id/tv5"
                                         android:layout_centerHorizontal="true"
                                         android:layout_marginTop="10dp"
-                                        android:layout_marginBottom="10dp"/>
+                                        android:layout_marginBottom="10dp"
+                                        android:text="Booking Status"
+                                        android:textSize="16sp" />
 
                                     <Button
+                                        android:id="@+id/book5"
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
-                                        android:id="@+id/book5"
-                                        android:background="@android:color/transparent"/>
+                                        android:background="@android:color/transparent" />
                                 </RelativeLayout>
 
                             </androidx.cardview.widget.CardView>
 
                             <androidx.cardview.widget.CardView
+                                android:id="@+id/cardview6"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:layout_weight="1"
                                 android:layout_gravity="center"
+                                android:layout_weight="1"
                                 android:orientation="vertical">
 
                                 <RelativeLayout
@@ -304,27 +316,28 @@
                                     android:layout_height="match_parent">
 
                                     <ImageView
-                                        android:layout_width="50dp"
                                         android:id="@+id/tv6"
+                                        android:layout_width="50dp"
                                         android:layout_height="50dp"
-                                        android:src="@drawable/moniquelogo"
                                         android:layout_centerInParent="true"
-                                        />
+                                        android:src="@drawable/feedback" />
+
                                     <TextView
+                                        android:id="@+id/t6"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="RATE-APP"
-                                        android:textSize="16sp"
                                         android:layout_below="@id/tv6"
                                         android:layout_centerHorizontal="true"
                                         android:layout_marginTop="10dp"
-                                        android:layout_marginBottom="10dp"/>
+                                        android:layout_marginBottom="10dp"
+                                        android:text="Feed Back"
+                                        android:textSize="16sp" />
 
                                     <Button
+                                        android:id="@+id/book6"
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
-                                        android:id="@+id/book6"
-                                        android:background="@android:color/transparent"/>
+                                        android:background="@android:color/transparent" />
 
 
                                 </RelativeLayout>

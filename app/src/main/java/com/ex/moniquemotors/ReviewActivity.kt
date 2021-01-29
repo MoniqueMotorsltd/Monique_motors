@@ -43,7 +43,7 @@ class ReviewActivity : AppCompatActivity() {
         }
 
         button2.setOnClickListener {
-            startActivity(Intent(this,Login::class.java))
+            startActivity(Intent(this,LoginActivity::class.java))
         }
 
         button3.setOnClickListener {
