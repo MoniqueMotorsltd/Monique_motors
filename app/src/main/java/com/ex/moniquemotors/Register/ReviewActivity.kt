@@ -1,4 +1,4 @@
-package com.ex.moniquemotors
+package com.ex.moniquemotors.Register
 
 import android.content.DialogInterface
 import android.content.Intent
@@ -6,6 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AlertDialog
+import com.ex.moniquemotors.Drawer.DashBoard
+import com.ex.moniquemotors.GuestMode.GuestDashBoard
+import com.ex.moniquemotors.R
 import kotlinx.android.synthetic.main.activity_review.*
 
 class ReviewActivity : AppCompatActivity() {
@@ -39,15 +42,15 @@ class ReviewActivity : AppCompatActivity() {
         btn3 = findViewById(R.id.button3)
 
         button.setOnClickListener {
-            startActivity(Intent(this,SignUp::class.java))
+            startActivity(Intent(this, SignUp::class.java))
         }
 
         button2.setOnClickListener {
-            startActivity(Intent(this,LoginActivity::class.java))
+            startActivity(Intent(this, LoginActivity::class.java))
         }
 
         button3.setOnClickListener {
-            startActivity(Intent(this,DashBoard::class.java))
+            startActivity(Intent(this, GuestDashBoard::class.java))
         }
 
 

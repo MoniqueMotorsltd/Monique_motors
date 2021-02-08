@@ -17,31 +17,25 @@
             android:id="@+id/nav_about"
             android:icon="@drawable/ic_phone"
             android:title="About Us" />
+        <item
+            android:id="@+id/nav_history"
+            android:icon="@drawable/ic_time"
+            android:title="History" />
+
 
     </group>
 
     <item android:title="Share">
         <menu>
-            <item
-                android:id="@+id/nav_whatsapp"
-                android:icon="@drawable/ic_share_24"
-                android:title="WhatsApp" />
-            <item
-                android:id="@+id/nav_twitter"
-                android:icon="@drawable/ic_share_24"
-                android:title="Twitter" />
-            <item
-                android:id="@+id/nav_facebook"
-                android:icon="@drawable/ic_share_24"
-                android:title="Facebook" />
-            <item
-                android:id="@+id/nav_instagram"
-                android:icon="@drawable/ic_share_24"
-                android:title="Instagram" />
+         <item
+             android:id="@+id/share"
+             android:icon="@drawable/ic_share_24"
+             android:title="Share"
+             />
             <item
                 android:id="@+id/send"
-                android:icon="@drawable/ic_people"
-                android:title="Contact Us" />
+                android:icon="@drawable/ic_send"
+                android:title="Send" />
 
         </menu>
 

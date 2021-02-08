@@ -1,9 +1,10 @@
-package com.ex.moniquemotors
+package com.ex.moniquemotors.Welcome
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import com.ex.moniquemotors.R
 
 class MainActivity : AppCompatActivity() {
 
@@ -17,7 +18,7 @@ class MainActivity : AppCompatActivity() {
 
         Handler().postDelayed(
             {
-             startActivity(Intent(this,Intro_Slider::class.java))
+             startActivity(Intent(this, Intro_Slider::class.java))
                 finish()
             },TIME_OUT.toLong())
     }

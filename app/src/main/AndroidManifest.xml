@@ -9,18 +9,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RoundTripActivity"></activity>
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".BookingActivity" />
+        <activity android:name=".BookingSatus.BookingStatus"></activity>
+        <activity android:name=".Logistics.LogisticsActivity" />
+        <activity android:name=".GuestMode.GuestHireABus" />
+        <activity android:name=".GuestMode.GuestBookASit" />
+        <activity android:name=".GuestMode.GuestDashBoard" />
+        <activity android:name=".SomeOne.SomeOneActivity" />
+        <activity android:name=".BusTypeActivity" />
+        <activity android:name=".Bookings.Hiring.Hire" />
+        <activity android:name=".RoundTripActivity" />
+        <activity android:name=".Register.LoginActivity" />
+        <activity android:name=".Book.BookingActivity" />
         <activity
-            android:name=".DashBoard"
+            android:name=".Drawer.DashBoard"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Login" />
-        <activity android:name=".SignUp" />
-        <activity android:name=".ReviewActivity" />
-        <activity android:name=".Intro_Slider" />
-        <activity android:name=".Profile" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".Register.SignUp" />
+        <activity android:name=".Register.ReviewActivity" />
+        <activity android:name=".Welcome.Intro_Slider" />
+        <activity android:name=".Drawer.Profile" />
+        <activity android:name=".Welcome.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

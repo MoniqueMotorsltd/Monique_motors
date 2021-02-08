@@ -1,10 +1,11 @@
-package com.ex.moniquemotors
+package com.ex.moniquemotors.Welcome
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.ex.moniquemotors.R
 import kotlinx.android.synthetic.main.fragment_slider_.*
 
 class Slider_Fragment : Fragment() {

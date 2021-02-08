@@ -1,4 +1,4 @@
-package com.ex.moniquemotors
+package com.ex.moniquemotors.Welcome
 
 import android.app.Activity
 import android.content.Intent
@@ -9,6 +9,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import androidx.viewpager.widget.ViewPager
+import com.ex.moniquemotors.R
+import com.ex.moniquemotors.Register.ReviewActivity
 import kotlinx.android.synthetic.main.activity_intro__slider.*
 
 class Intro_Slider : AppCompatActivity() {
@@ -31,7 +33,9 @@ class Intro_Slider : AppCompatActivity() {
         fragment3.title("${R.drawable.covid19image2}")
 
 
-        adapter = myPagerAdapter(supportFragmentManager)
+        adapter = myPagerAdapter(
+            supportFragmentManager
+        )
         adapter.list.add(fragment1)
         adapter.list.add(fragment2)
         adapter.list.add(fragment3)
@@ -57,7 +61,8 @@ class Intro_Slider : AppCompatActivity() {
                   if (position == adapter.list.size -1 ){
                       btn_next.text = "DONE"
                       btn_next.setOnClickListener {
-                          startActivity(Intent(activity,ReviewActivity::class.java))
+                          startActivity(Intent(activity,
+                              ReviewActivity::class.java))
                           finish()
                       }
                   }else{
@@ -94,7 +99,7 @@ class Intro_Slider : AppCompatActivity() {
     }
 
     fun goToDashBoard(){
-        startActivity(Intent(this,ReviewActivity::class.java))
+        startActivity(Intent(this, ReviewActivity::class.java))
         finish()
     }
     class myPagerAdapter(manager: FragmentManager) : FragmentPagerAdapter(manager){

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Logistics.LogisticsActivity">
+    <RelativeLayout
+        android:id="@+id/tv_tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/tv_search"
+            android:layout_toLeftOf="@id/tv_search"
+            android:maxLines="1"
+            android:hint="Reference Number ID"
+            android:textColorHint="@android:color/white"
+            android:backgroundTint="@android:color/white"
+            android:textColor="@android:color/white"/>
+        <ImageButton
+            android:id="@+id/tv_arrow"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_arrow_back"
+            android:background="@android:color/transparent"/>
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/tv_search"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            app:srcCompat="@android:drawable/ic_menu_search"/>
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/search_progress"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+
+        android:layout_centerInParent="true"/>
+</RelativeLayout>
