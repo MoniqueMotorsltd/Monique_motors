@@ -44,10 +44,10 @@ class OneWayTrip : Fragment() {
         }
 
 
-      /* date.setOnClickListener {
+       date.setOnClickListener {
             val now = Calendar.getInstance()
             val date = DatePickerDialog(
-                this,
+                v.context,
                 DatePickerDialog.OnDateSetListener { view, year, month, dayOfMonth ->  },
                 now.get(Calendar.YEAR),
                 now.get(Calendar.MONTH),
@@ -60,7 +60,7 @@ class OneWayTrip : Fragment() {
         time.setOnClickListener {
             val now = Calendar.getInstance()
             val time = TimePickerDialog(
-                this,
+                v.context,
                 TimePickerDialog.OnTimeSetListener { view, hourOfDay, minute ->  },
                 now.get(Calendar.HOUR_OF_DAY),
                 now.get(Calendar.MINUTE),
@@ -69,7 +69,7 @@ class OneWayTrip : Fragment() {
             time.show()
 
 
-        }*/
+        }
 
 
         return v
