@@ -91,6 +91,7 @@
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/some_one_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Date"
@@ -99,6 +100,7 @@
             android:textStyle="bold"
             android:textColor="@android:color/black"/>
         <Button
+            android:id="@+id/some_one_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Time"
@@ -110,6 +112,7 @@
     </LinearLayout>
 
     <Spinner
+        android:id="@+id/spinnerPerson"
         android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="60dp"/>

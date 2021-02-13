@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -33,15 +36,10 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:weightSum="2"
-        android:orientation="horizontal"
-        >
+
         <EditText
-            android:layout_width="198dp"
-            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
             android:ems="10"
             android:hint="Person's first name"
             android:drawableStart="@drawable/ic_user"
@@ -50,15 +48,15 @@
             android:textSize="14sp"/>
 
         <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
             android:drawableStart="@drawable/ic_people"
             android:ems="10"
             android:hint="Last name"
             android:background="@drawable/custom_input"
             android:textSize="14sp"
             android:drawablePadding="12dp"/>
-    </LinearLayout>
+
 
     <EditText
         android:layout_marginTop="18dp"
@@ -90,6 +88,7 @@
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/some_one_date2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Date"
@@ -98,6 +97,7 @@
             android:textStyle="bold"
             android:textColor="@android:color/black"/>
         <Button
+            android:id="@+id/some_one_time2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Time"
@@ -109,6 +109,7 @@
     </LinearLayout>
 
     <Spinner
+        android:id="@+id/personSpinner"
         android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="60dp"/>
@@ -118,6 +119,7 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:ems="10"
+        android:maxLines="1"
         android:hint="Person's Phone number"
         android:inputType="number"
         android:drawableStart="@drawable/ic_phone"
@@ -140,6 +142,7 @@
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/tv_some_one_date2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Date"
@@ -148,6 +151,7 @@
             android:textStyle="bold"
             android:textColor="@android:color/black"/>
         <Button
+            android:id="@+id/tv_some_one_time2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Time"
@@ -171,3 +175,4 @@
         android:textSize="20dp" />
 
 </LinearLayout>
+</ScrollView>

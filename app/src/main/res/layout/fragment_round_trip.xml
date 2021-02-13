@@ -54,6 +54,17 @@
         android:textSize="14sp"
         android:drawablePadding="12dp"/>
 
+
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="Departure date"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textColor="@android:color/black"/>
+
     <LinearLayout
         android:layout_marginTop="15dp"
         android:layout_width="match_parent"
@@ -62,6 +73,7 @@
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/date2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Date"
@@ -70,6 +82,43 @@
             android:textStyle="bold"
             android:textColor="@android:color/black"/>
         <Button
+            android:id="@+id/time2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time"
+            android:background="@android:color/transparent"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="Arrival date"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textColor="@android:color/black"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/rd_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date"
+            android:background="@android:color/transparent"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"/>
+        <Button
+            android:id="@+id/rd_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Time"
@@ -81,6 +130,7 @@
     </LinearLayout>
 
     <Spinner
+        android:id="@+id/persons"
         android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="60dp"/>

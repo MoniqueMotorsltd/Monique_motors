@@ -61,6 +61,7 @@
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/hire_date_two"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Date"
@@ -69,6 +70,7 @@
             android:textStyle="bold"
             android:textColor="@android:color/black"/>
         <Button
+            android:id="@+id/hire_time_two"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Time"
@@ -100,6 +102,7 @@
         android:layout_height="60dp"
         android:text="Retain Bus"/>
     <Spinner
+        android:id="@+id/spinner2"
         android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="60dp"/>

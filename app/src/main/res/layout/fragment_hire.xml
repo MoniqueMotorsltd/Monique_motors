@@ -40,7 +40,9 @@
         android:drawableStart="@drawable/ic_location_bus"
         android:background="@drawable/custom_input"
         android:drawablePadding="12dp"
-        android:textSize="14sp"/>
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
 
     <EditText
         android:layout_marginTop="15dp"
@@ -61,7 +63,7 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/date"
+            android:id="@+id/hire_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Date"
@@ -70,7 +72,7 @@
             android:textStyle="bold"
             android:textColor="@android:color/black"/>
         <Button
-            android:id="@+id/time"
+            android:id="@+id/hire_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Time"
@@ -85,23 +87,33 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"/>
     <RadioGroup
+        android:id="@+id/radiogroup_hire"
         android:layout_width="match_parent"
         android:layout_height="80dp">
         <RadioButton
+            android:id="@+id/radio_btn_onewaytrip"
             android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:text="One-Trip"/>
+            android:text="One-Trip"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
         <RadioButton
+            android:id="@+id/radio_btn_roundtrip"
             android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:text="Round-Trip"/>
+            android:text="Round-Trip"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
     </RadioGroup>
 
     <CheckBox
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:text="Retain Bus"/>
+        android:text="Retain Bus"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
     <Spinner
+        android:id="@+id/spinner"
         android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="60dp"/>
