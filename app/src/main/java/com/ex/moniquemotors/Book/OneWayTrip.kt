@@ -32,8 +32,11 @@ class OneWayTrip : Fragment() {
         var numberOfPersons = v.findViewById<View>(R.id.numberOfPersons1) as Spinner
 
 
-        var format = SimpleDateFormat("dd MMM,YYYY",Locale.UK)
-        var timeFormat = SimpleDateFormat("hh:mm a",Locale.UK)
+        val format = SimpleDateFormat(
+            "dd MMM,YYYY",
+            Locale.UK
+        )
+        val timeFormat = SimpleDateFormat("hh:mm a",Locale.UK)
 
 
 
