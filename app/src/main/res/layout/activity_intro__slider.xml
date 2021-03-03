@@ -4,14 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#682A62"
     tools:context=".Welcome.Intro_Slider">
 
 
-    <androidx.viewpager.widget.ViewPager
+    <ImageView
         android:id="@+id/view_pager"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@id/divider" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/divider"
+        android:src="@drawable/covid19"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100dp"
+        android:background="#682A62"/>
 
 
 
@@ -27,12 +32,15 @@
         android:id="@+id/button_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#682A62"
         android:layout_alignParentBottom="true">
         <Button
             android:id="@+id/btn_skip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="SKIP" />
+            android:text="SKIP"
+            android:background="@android:color/transparent"
+            android:textColor="@color/colorActivated"/>
       <LinearLayout
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
@@ -68,7 +76,8 @@
             android:id="@+id/btn_next"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="NEXT"
+            android:text=""
+            android:background="@android:color/transparent"
             android:layout_alignParentEnd="true"/>
     </RelativeLayout>
 

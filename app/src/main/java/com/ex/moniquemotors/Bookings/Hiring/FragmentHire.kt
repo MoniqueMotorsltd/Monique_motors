@@ -12,6 +12,9 @@ import androidx.core.view.get
 import com.ex.moniquemotors.Book.RoundTrip
 import com.ex.moniquemotors.R
 import kotlinx.android.synthetic.main.fragment_hire.*
+import kotlinx.android.synthetic.main.fragment_one_way_trip.*
+import java.lang.Exception
+import java.text.SimpleDateFormat
 import java.util.*
 
 
@@ -34,9 +37,16 @@ class FragmentHire : Fragment() {
         val radio2 = iv.findViewById<View>(R.id.radio_btn_roundtrip) as RadioButton
         val spinner = iv.findViewById<View>(R.id.spinner) as Spinner
 
+        val timeFormat = SimpleDateFormat("hh:mm a",Locale.UK)
+        val dateFormat = SimpleDateFormat("dd MMM,yyyy", Locale.UK)
 
-        var number = arrayOf(1,2,3,4,5,6,7,8,9,10)
-        spinner.adapter = ArrayAdapter<Int>(
+
+        val now = Calendar.getInstance()
+        hireDate.text = dateFormat.format(now.time)
+
+
+        var number = arrayOf("Number Of Persons",1,2,3,4,5,6,7,8,9,10)
+        spinner.adapter = ArrayAdapter<Any>(
             iv.context,
             android.R.layout.simple_list_item_1,
             number
@@ -54,7 +64,7 @@ class FragmentHire : Fragment() {
                 position: Int,
                 id: Long
             ) {
-               spinner.get(position)
+               val selectedItem = parent!!.getItemAtPosition(position)
             }
 
         }
@@ -71,22 +81,39 @@ class FragmentHire : Fragment() {
 
 
         hireDate.setOnClickListener {
-            val now6 = Calendar.getInstance()
             val date6 = DatePickerDialog(
                 iv.context,
-                DatePickerDialog.OnDateSetListener { view, year, month, dayOfMonth ->  },
-                now6.get(Calendar.YEAR),
-                now6.get(Calendar.MONTH),
-                now6.get(Calendar.DAY_OF_MONTH)
+                DatePickerDialog.OnDateSetListener { view, year, month, dayOfMonth ->
+                    now.set(Calendar.YEAR,year)
+                    now.set(Calendar.MONTH,month)
+                    now.set(Calendar.DAY_OF_MONTH,dayOfMonth)
+                    hireDate.text = dateFormat.format(now.time)
+                },
+                now.get(Calendar.YEAR),
+                now.get(Calendar.MONTH),
+                now.get(Calendar.DAY_OF_MONTH)
             )
             date6.show()
         }
 
         hireTime.setOnClickListener {
             val now7 = Calendar.getInstance()
+            try{
+                if (hireTime.text != "Time"){
+                    val date = timeFormat.parse(time.text.toString())
+                    now7.time = date
+                }
+            }catch (e:Exception){
+                e.printStackTrace()
+            }
             val date7 = TimePickerDialog(
                 iv.context,
-                TimePickerDialog.OnTimeSetListener { view, hourOfDay, minute ->  },
+                TimePickerDialog.OnTimeSetListener { view, hourOfDay, minute ->
+                    val selectedTime = Calendar.getInstance()
+                    selectedTime.set(Calendar.HOUR_OF_DAY,hourOfDay)
+                    selectedTime.set(Calendar.MINUTE,minute)
+                    hireTime.text  = timeFormat.format(selectedTime.time)
+                },
                 now7.get(Calendar.HOUR_OF_DAY),
                 now7.get(Calendar.MINUTE),
                 false

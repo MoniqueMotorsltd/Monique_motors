@@ -13,8 +13,11 @@ import android.widget.Button
 import android.widget.Spinner
 import androidx.core.view.get
 import com.ex.moniquemotors.Book.RoundTrip
+import com.ex.moniquemotors.Constant.Constant.routes
 import com.ex.moniquemotors.R
+import kotlinx.android.synthetic.main.fragment_one_way_trip.*
 import kotlinx.android.synthetic.main.fragment_someone_round_trip.view.*
+import java.text.SimpleDateFormat
 import java.util.*
 
 class SomeoneRoundTripFragment : Fragment() {
@@ -30,14 +33,36 @@ class SomeoneRoundTripFragment : Fragment() {
         val someOneTime2 = vvvv.findViewById<View>(R.id.some_one_time2) as Button
         val someOneDate3 = vvvv.findViewById<View>(R.id.tv_some_one_date2) as Button
         val someOneTime3 = vvvv.findViewById<View>(R.id.tv_some_one_time2) as Button
+        val location = vvvv.findViewById<View>(R.id.tv_location) as Spinner
+        val destination = vvvv.findViewById<View>(R.id.tv_destination) as Spinner
         val spinner = vvvv.findViewById<View>(R.id.personSpinner) as Spinner
 
 
-        val people = arrayOf(1,2,3,4,5,6,7,8,9,10)
-        spinner.adapter = ArrayAdapter<Int>(vvvv.context,android.R.layout.simple_list_item_1,people)
-        spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+        val timeFormat = SimpleDateFormat("hh:mm a",Locale.UK)
+        val dateFormat = SimpleDateFormat("dd MMM,yyyy", Locale.UK)
+
+
+        val now = Calendar.getInstance()
+        someOneDate2.text = dateFormat.format(now.time)
+
+
+        val routes = arrayOf("Aba",
+            "Lagos",
+            "Umuahia",
+            "Mbaise",
+            "Owerri",
+            "Asaba",
+            "Onitsha",
+            "Uli",
+            "Ihiala",
+            "Benin",
+            "Enugu",
+            "Abakaliki",
+            "Portharcourt",
+            "Abuja")
+        location.adapter  = ArrayAdapter(vvvv.context,android.R.layout.simple_list_item_1,routes)
+        location.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
             override fun onNothingSelected(parent: AdapterView<*>?) {
-                spinner.toString() == "Number Of Persons"
             }
 
             override fun onItemSelected(
@@ -46,7 +71,23 @@ class SomeoneRoundTripFragment : Fragment() {
                 position: Int,
                 id: Long
             ) {
-               spinner.get(position)
+                val item = parent!!.getItemAtPosition(position)
+            }
+
+        }
+        val number = arrayOf("Number Of Persons",1,2,3,4,5,6,7,8,9,10)
+        spinner.adapter = ArrayAdapter<Any>(vvvv.context,android.R.layout.simple_list_item_1, number)
+        spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+                spinner.toString() == "Number Of Persons"
+            }
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+               val selectedItem = parent!!.getItemAtPosition(position)
             }
 
         }
@@ -55,28 +96,45 @@ class SomeoneRoundTripFragment : Fragment() {
             val fragment = SomeOneFragment()
             val fragmentManager = activity!!.supportFragmentManager
             val fragmentTransaction = fragmentManager.beginTransaction()
-            fragmentTransaction.replace(R.id.fragmentView,fragment)
+            fragmentTransaction.replace(R.id.frameLayout,fragment)
             fragmentTransaction.addToBackStack(null)
             fragmentTransaction.commit()
-            onDestroy()
         }
 
         someOneDate2.setOnClickListener {
-            val now6 = Calendar.getInstance()
             val date6 = DatePickerDialog(
                 vvvv.context,
-                DatePickerDialog.OnDateSetListener { view, year, month, dayOfMonth ->  },
-                now6.get(Calendar.YEAR),
-                now6.get(Calendar.MONTH),
-                now6.get(Calendar.DAY_OF_MONTH)
+                DatePickerDialog.OnDateSetListener { view, year, month, dayOfMonth ->
+                    now.set(Calendar.YEAR,year)
+                    now.set(Calendar.MONTH,month)
+                    now.set(Calendar.DAY_OF_MONTH,dayOfMonth)
+                    someOneDate2.text = dateFormat.format(now.time)
+                },
+                now.get(Calendar.YEAR),
+                now.get(Calendar.MONTH),
+                now.get(Calendar.DAY_OF_MONTH)
             )
             date6.show()
         }
+
         someOneTime2.setOnClickListener {
             val now7 = Calendar.getInstance()
+            try {
+                if(someOneTime2.text != "Time"){
+                val date = timeFormat.parse(time.text.toString())
+                now7.time = date
+                }
+            }catch (e:Exception){
+                e.printStackTrace()
+            }
             val date7 = TimePickerDialog(
                 vvvv.context,
-                TimePickerDialog.OnTimeSetListener { view, hourOfDay, minute ->  },
+                TimePickerDialog.OnTimeSetListener { view, hourOfDay, minute ->
+                    val selectedTime = Calendar.getInstance()
+                    selectedTime.set(Calendar.HOUR_OF_DAY,hourOfDay)
+                    selectedTime.set(Calendar.MINUTE,minute)
+                    someOneTime2.text  = timeFormat.format(selectedTime.time)
+                },
                 now7.get(Calendar.HOUR_OF_DAY),
                 now7.get(Calendar.MINUTE),
                 false
@@ -85,21 +143,40 @@ class SomeoneRoundTripFragment : Fragment() {
         }
 
         someOneDate3.setOnClickListener {
-            val exact = Calendar.getInstance()
             val moment = DatePickerDialog(
                 vvvv.context,
-                DatePickerDialog.OnDateSetListener { view, year, month, dayOfMonth ->  },
-                exact.get(Calendar.YEAR),
-                exact.get(Calendar.MONTH),
-                exact.get(Calendar.DAY_OF_MONTH)
+                DatePickerDialog.OnDateSetListener { view, year, month, dayOfMonth ->
+                    now.set(Calendar.YEAR,year)
+                    now.set(Calendar.MONTH,month)
+                    now.set(Calendar.DAY_OF_MONTH,dayOfMonth)
+                    someOneDate3.text = dateFormat.format(now.time)
+                },
+                now.get(Calendar.YEAR),
+                now.get(Calendar.MONTH),
+                now.get(Calendar.DAY_OF_MONTH)
             )
             moment.show()
         }
+
+
         someOneTime3.setOnClickListener {
             val next = Calendar.getInstance()
+            try {
+                if (someOneTime3.text != "Time"){
+                    val date = timeFormat.parse(time.text.toString())
+                    next.time = date
+                }
+            }catch (e:Exception){
+                e.printStackTrace()
+            }
             val nxt = TimePickerDialog(
                 vvvv.context,
-                TimePickerDialog.OnTimeSetListener { view, hourOfDay, minute ->  },
+                TimePickerDialog.OnTimeSetListener { view, hourOfDay, minute ->
+                    val selectedTime = Calendar.getInstance()
+                    selectedTime.set(Calendar.HOUR_OF_DAY,hourOfDay)
+                    selectedTime.set(Calendar.MINUTE,minute)
+                    time.text  = timeFormat.format(selectedTime.time)
+                },
                 next.get(Calendar.HOUR_OF_DAY),
                 next.get(Calendar.MINUTE),
                 false

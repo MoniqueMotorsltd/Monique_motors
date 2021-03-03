@@ -12,6 +12,10 @@ import com.ex.moniquemotors.R
 class BookingActivity : AppCompatActivity() {
 
 
+    override fun onBackPressed() {
+        finish()
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_booking)

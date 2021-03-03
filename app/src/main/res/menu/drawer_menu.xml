@@ -12,11 +12,15 @@
         <item
             android:id="@+id/nav_rate"
             android:icon="@drawable/ic_star_half"
-            android:title="Rate Us" />
+            android:title="Rate us" />
+
         <item
             android:id="@+id/nav_about"
+            android:title="About us" />
+        <item
+            android:id="@+id/nav_customer"
             android:icon="@drawable/ic_phone"
-            android:title="Contact Us" />
+            android:title="Customer care" />
         <item
             android:id="@+id/nav_history"
             android:icon="@drawable/ic_time"
@@ -28,10 +32,25 @@
     <item android:title="Share">
         <menu>
          <item
-             android:id="@+id/share"
-             android:icon="@drawable/ic_share_24"
-             android:title="Share"
+             android:id="@+id/facebook"
+             android:icon="@drawable/facebook"
+             android:title="Facebook"
              />
+           <item
+            android:id="@+id/whatsapp"
+            android:icon="@drawable/whatsapp"
+            android:title="Whatsapp"
+            />
+            <item
+                android:id="@+id/twitter"
+                android:icon="@drawable/twitter"
+                android:title="Twitter"
+                />
+            <item
+                android:id="@+id/instagram"
+                android:icon="@drawable/instagram"
+                android:title="Instagram"
+                />
             <item
                 android:id="@+id/send"
                 android:icon="@drawable/ic_send"

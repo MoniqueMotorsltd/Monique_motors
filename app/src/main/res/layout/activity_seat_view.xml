@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SeatView">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:background="@color/transparent"
+            android:src="@drawable/ic_arrow_back" />
+    </androidx.appcompat.widget.Toolbar>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+   android:layout_marginTop="630dp"
+    >
+    <LinearLayout
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:text="Booked"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+    <ImageView
+        android:layout_marginTop="15dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/seat_icon"
+        android:layout_marginStart="10dp"
+        />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:text="Booked"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+
+        <ImageView
+        android:layout_marginTop="15dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/seat_icon"
+        android:layout_marginStart="10dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:text="Booked"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+        <ImageView
+        android:layout_marginTop="15dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/seat_icon"
+        android:layout_marginStart="10dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:text="Booked"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+        <ImageView
+        android:layout_marginTop="15dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/seat_icon"
+        android:layout_marginStart="10dp"/>
+    </LinearLayout>
+</LinearLayout>
+</LinearLayout>

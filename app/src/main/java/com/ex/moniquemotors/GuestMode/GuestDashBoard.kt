@@ -61,7 +61,6 @@ class GuestDashBoard : AppCompatActivity() {
 
 
         back.setOnClickListener {
-            startActivity(Intent(this,ReviewActivity::class.java))
             finish()
         }
 

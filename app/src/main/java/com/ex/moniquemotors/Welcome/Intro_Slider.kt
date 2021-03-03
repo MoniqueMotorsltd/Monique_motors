@@ -16,9 +16,9 @@ import kotlinx.android.synthetic.main.activity_intro__slider.*
 class Intro_Slider : AppCompatActivity() {
 
     val fragment1 = Slider_Fragment()
-    val fragment2 = Slider_Fragment()
-    val fragment3 = Slider_Fragment()
-    lateinit var adapter: myPagerAdapter
+    //val fragment2 = Slider_Fragment()
+    //val fragment3 = Slider_Fragment()
+    //lateinit var adapter: myPagerAdapter
     lateinit var activity: Activity
 
 
@@ -28,28 +28,28 @@ class Intro_Slider : AppCompatActivity() {
         setContentView(R.layout.activity_intro__slider)
 
         activity = this
-        fragment1.title("${R.drawable.covid19}")
-        fragment2.title("${R.drawable.covid19image}")
-        fragment3.title("${R.drawable.covid19image2}")
+       /* fragment1.title("")
+        //fragment2.title("${R.drawable.covid19image}")
+        //fragment3.title("${R.drawable.covid19image2}")*/
 
 
-        adapter = myPagerAdapter(
-            supportFragmentManager
-        )
-        adapter.list.add(fragment1)
-        adapter.list.add(fragment2)
-        adapter.list.add(fragment3)
+        //adapter = myPagerAdapter(
+        //    supportFragmentManager
+        //)
+      //  adapter.list.add(fragment1)
+        //adapter.list.add(fragment2)
+      //  adapter.list.add(fragment3)
 
 
-        view_pager.adapter = adapter
+      /*  view_pager.adapter = adapter
         btn_next.setOnClickListener {
             view_pager.currentItem++
-        }
+        }*/
         btn_skip.setOnClickListener {
             goToDashBoard()
         }
 
-          view_pager.addOnPageChangeListener(object  : ViewPager.OnPageChangeListener{
+          /*view_pager.addOnPageChangeListener(object  : ViewPager.OnPageChangeListener{
               override fun onPageScrollStateChanged(state: Int) {
               }
 
@@ -58,7 +58,7 @@ class Intro_Slider : AppCompatActivity() {
               }
 
               override fun onPageSelected(position: Int) {
-                  if (position == adapter.list.size -1 ){
+                /*  if (position == adapter.list.size -1 ){
                       btn_next.text = "DONE"
                       btn_next.setOnClickListener {
                           startActivity(Intent(activity,
@@ -70,7 +70,7 @@ class Intro_Slider : AppCompatActivity() {
                       btn_next.setOnClickListener {
                           view_pager.currentItem++
                       }
-                  }
+                  }*/
                   when(view_pager.currentItem){
                       0 -> {
                            indicator1.setTextColor(Color.BLACK)
@@ -93,7 +93,7 @@ class Intro_Slider : AppCompatActivity() {
 
               }
 
-          })
+          })*/
 
 
     }
@@ -102,7 +102,7 @@ class Intro_Slider : AppCompatActivity() {
         startActivity(Intent(this, ReviewActivity::class.java))
         finish()
     }
-    class myPagerAdapter(manager: FragmentManager) : FragmentPagerAdapter(manager){
+   /* class myPagerAdapter(manager: FragmentManager) : FragmentPagerAdapter(manager){
 
         val list : MutableList<Fragment> = ArrayList()
 
@@ -114,5 +114,5 @@ class Intro_Slider : AppCompatActivity() {
             return list.size
         }
 
-    }
+    }*/
 }

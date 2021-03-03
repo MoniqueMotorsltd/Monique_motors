@@ -1,7 +1,8 @@
-package com.ex.moniquemotors.Book
+ package com.ex.moniquemotors.Book
 
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -10,6 +11,8 @@ import android.view.ViewGroup
 import android.widget.*
 import androidx.core.app.SharedElementCallback
 import androidx.core.view.get
+import com.ex.moniquemotors.BusTypeActivity
+import com.ex.moniquemotors.Constant.Constant.routes
 import com.ex.moniquemotors.R
 import kotlinx.android.synthetic.main.activity_booking.*
 import java.text.SimpleDateFormat
@@ -29,26 +32,72 @@ class OneWayTrip : Fragment() {
         val btn2 = v.findViewById<View>(R.id.ButtonTwo) as Button
         val date = v.findViewById<View>(R.id.date) as Button
         val time = v.findViewById<View>(R.id.time) as Button
+        val next = v.findViewById<View>(R.id.tv_nxt) as Button
+        val button_location = v.findViewById<View>(R.id.button_location) as Spinner
+        val button_destination = v.findViewById<View>(R.id.button_destination) as Spinner
         var numberOfPersons = v.findViewById<View>(R.id.numberOfPersons1) as Spinner
 
 
-        val format = SimpleDateFormat(
-            "dd MMM,YYYY",
-            Locale.UK
-        )
+
+        val dateFormat = SimpleDateFormat("dd MMM,yyyy", Locale.UK)
         val timeFormat = SimpleDateFormat("hh:mm a",Locale.UK)
 
 
+        val now = Calendar.getInstance()
+        date.text = dateFormat.format(now.time)
 
-        val options = arrayOf(1,2,3,4,5,6,7,8,9,10)
-        numberOfPersons.adapter = ArrayAdapter<Int>(
+
+        val routes = arrayOf("Aba",
+            "Lagos",
+            "Umuahia",
+            "Mbaise",
+            "Owerri",
+            "Asaba",
+            "Onitsha",
+            "Uli",
+            "Ihiala",
+            "Benin",
+            "Enugu",
+            "Abakaliki",
+            "Portharcourt",
+            "Abuja")
+        button_location.adapter = ArrayAdapter(v.context,android.R.layout.simple_list_item_1,routes)
+        button_location.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+            }
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+                val selectedItem = parent!!.getItemAtPosition(position)
+            }
+        }
+
+        button_destination.adapter = ArrayAdapter(v.context,android.R.layout.simple_list_item_1,routes())
+        button_destination.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+            }
+
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+                val selectedItem = parent!!.getItemAtPosition(position)
+            }
+
+        }
+        val number = arrayOf("Number Of Persons",1,2,3,4,5,6,7,8,9,10)
+        numberOfPersons.adapter = ArrayAdapter<Any>(
             v.context,
             android.R.layout.simple_list_item_1,
-            options
+              number
         )
         numberOfPersons.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
             override fun onNothingSelected(parent: AdapterView<*>?) {
-                "Number Of Persons" == numberOfPersons.toString()
             }
 
             override fun onItemSelected(parent: AdapterView<*>?,
@@ -56,7 +105,8 @@ class OneWayTrip : Fragment() {
                 position: Int,
                 id: Long
             ) {
-                numberOfPersons.get(position)
+               val selectedItem = parent!!.getItemAtPosition(position)
+
             }
 
         }
@@ -73,15 +123,13 @@ class OneWayTrip : Fragment() {
 
 
        date.setOnClickListener {
-            val now = Calendar.getInstance()
             val date = DatePickerDialog(
                 v.context,
                 DatePickerDialog.OnDateSetListener { view, year, month, dayOfMonth ->
-                    val selectedDate = Calendar.getInstance()
-                    selectedDate.set(Calendar.YEAR,year)
-                    selectedDate.set(Calendar.MONTH,month)
-                    selectedDate.set(Calendar.DAY_OF_MONTH,dayOfMonth)
-                    val day = format.format(selectedDate.time)
+                    now.set(Calendar.YEAR,year)
+                    now.set(Calendar.MONTH,month)
+                    now.set(Calendar.DAY_OF_MONTH,dayOfMonth)
+                   date.text = dateFormat.format(now.time)
                 },
                 now.get(Calendar.YEAR),
                 now.get(Calendar.MONTH),
@@ -89,6 +137,9 @@ class OneWayTrip : Fragment() {
             )
             date.show()
        }
+
+
+
 
         time.setOnClickListener {
             val now = Calendar.getInstance()
@@ -115,6 +166,11 @@ class OneWayTrip : Fragment() {
             time.show()
 
 
+        }
+
+
+        next.setOnClickListener{
+            startActivity(Intent(v.context,BusTypeActivity::class.java))
         }
 
 

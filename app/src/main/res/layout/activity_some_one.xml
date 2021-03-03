@@ -20,16 +20,21 @@
         <ImageButton
             android:id="@+id/behind"
             android:layout_width="60dp"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:src="@drawable/ic_arrow_back"
             android:background="@color/transparent"/>
     </androidx.appcompat.widget.Toolbar>
 
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="15dp">
     <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
     </FrameLayout>
+
+    </LinearLayout>
 </LinearLayout>

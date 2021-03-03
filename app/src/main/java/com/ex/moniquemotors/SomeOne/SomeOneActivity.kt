@@ -13,6 +13,10 @@ import kotlinx.android.synthetic.main.activity_some_one.*
 class SomeOneActivity : AppCompatActivity() {
 
 
+    override fun onBackPressed() {
+        finish()
+    }
+
     lateinit var backButton:ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {

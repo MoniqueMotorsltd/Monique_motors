@@ -6,11 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".Welcome.Slider_Fragment">
 
-    <TextView
+    <ImageView
         android:id="@+id/fragment_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_blank_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/covid19"
+        android:background="#682A62"
         android:layout_centerInParent="true"
         android:textSize="30sp"/>
 
