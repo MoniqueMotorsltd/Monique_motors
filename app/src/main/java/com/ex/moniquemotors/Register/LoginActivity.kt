@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import com.ex.moniquemotors.Drawer.DashBoard
+import com.ex.moniquemotors.Forgotten_password
 import com.ex.moniquemotors.R
 import kotlinx.android.synthetic.main.activity_login.*
 
@@ -12,6 +13,7 @@ class LoginActivity : AppCompatActivity() {
 
     lateinit var loginButton: Button
     lateinit var noButton: Button
+    lateinit var passButton : Button
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,6 +22,7 @@ class LoginActivity : AppCompatActivity() {
 
         loginButton = findViewById(R.id.btn_login)
         noButton = findViewById(R.id.reg2)
+        passButton = findViewById(R.id.pass)
 
 
 
@@ -31,6 +34,10 @@ class LoginActivity : AppCompatActivity() {
         reg2.setOnClickListener {
            startActivity(Intent(this,SignUp::class.java))
             finish()
+        }
+
+        pass.setOnClickListener {
+            startActivity(Intent(this,Forgotten_password::class.java))
         }
 
 

@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SeatView"></activity>
+        <activity android:name=".Newpassword"></activity>
+        <activity android:name=".Forgotten_password" />
+        <activity android:name=".SeatView" />
         <activity android:name=".History.History" />
         <activity android:name=".BookingSatus.BookingStatus" />
         <activity android:name=".Logistics.LogisticsActivity" />
