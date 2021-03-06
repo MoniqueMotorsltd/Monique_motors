@@ -21,13 +21,11 @@
         <activity android:name=".SomeOne.SomeOneActivity" />
         <activity android:name=".BusTypeActivity" />
         <activity android:name=".Bookings.Hiring.Hire" />
-        <activity android:name=".RoundTripActivity" />
         <activity android:name=".Register.LoginActivity" />
         <activity android:name=".Book.BookingActivity" />
         <activity
             android:name=".Drawer.DashBoard"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Login" />
         <activity android:name=".Register.SignUp" />
         <activity android:name=".Register.ReviewActivity" />
         <activity android:name=".Welcome.Intro_Slider" />

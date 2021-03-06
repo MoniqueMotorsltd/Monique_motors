@@ -34,22 +34,22 @@
          <item
              android:id="@+id/facebook"
              android:icon="@drawable/facebook"
-             android:title="Facebook"
+             android:title=""
              />
            <item
             android:id="@+id/whatsapp"
             android:icon="@drawable/whatsapp"
-            android:title="Whatsapp"
+            android:title=""
             />
             <item
                 android:id="@+id/twitter"
                 android:icon="@drawable/twitter"
-                android:title="Twitter"
+                android:title=""
                 />
             <item
                 android:id="@+id/instagram"
                 android:icon="@drawable/instagram"
-                android:title="Instagram"
+                android:title=""
                 />
             <item
                 android:id="@+id/send"
